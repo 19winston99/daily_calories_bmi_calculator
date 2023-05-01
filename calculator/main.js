@@ -7,7 +7,11 @@ function calculate() {
     let calories = weight.value * 24 * 1.3;
     let bmi = (weight.value / (height.value * height.value)).toFixed(2);
     let bodyCondition;
+    let result = document.querySelector("#result");
 
+    if (bmi == Infinity || bmi == -Infinity) {
+        return result.innerText = "Prova ad inserire dei valori validi";
+    }
     if (bmi < 16) {
         bodyCondition = "Sottopeso grave";
     } else if (bmi <= 16.99) {
@@ -22,12 +26,10 @@ function calculate() {
         bodyCondition = "Obesità lieve (1° classe)";
     } else if (bmi <= 39.99) {
         bodyCondition = "Obesità moderata (2° classe)";
-    } else {
+    } else if (bmi > 40) {
         bodyCondition = "Obesità grave (3° classe)";
+    } else {
+        return result.innerText = "Prova ad inserire dei valori validi";
     }
-
-    console.log(calories);
-    console.log(bmi);
-    console.log(bodyCondition);
-
+    result.innerText = "Il tuo bmi è: " + bmi + " => " + bodyCondition + "\n Kcal giornaliere: " + calories
 }

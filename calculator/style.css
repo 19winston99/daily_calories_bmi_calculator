@@ -1,1 +1,17 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+.calculator-container {
+    border: 2px solid #262626;
+    padding: 1em;
+    border-radius: 12px;
+    width: 19em !important;
+}
+
+@media screen and (min-width: 500px) {
+    .calculator-container {
+        border: 2px solid #262626;
+        padding: 1em;
+        border-radius: 12px;
+        width: 30em !important;
+    }
+}

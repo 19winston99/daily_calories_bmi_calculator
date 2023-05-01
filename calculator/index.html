@@ -12,19 +12,21 @@
 </head>
 
 <body>
-    <div class="container d-flex flex-column justify-content-center align-items-center gap-5">
+    <div class="container calculator-container mt-5">
         <h4 class="mt-3">Calcolatore BMI & Calorie giornaliere</h4>
-        <div class="w-25 bg-info bg-opacity-10 border border-success border-2 p-4 rounded-2">
+        <div>
             <div class="mb-3">
                 <label for="weight" class="form-label">Peso in Kg</label>
                 <input type="number" class="form-control" id="weight" placeholder="es. 80">
             </div>
             <div class="mb-3">
-                <label for="height" class="form-label">Altezza in M</label>
+                <label for="height" class="form-label">Altezza in Metri</label>
                 <input type="number" class="form-control" id="height" placeholder="es. 1.75">
             </div>
             <button onclick="calculate()" class="btn btn-sm btn-success">Calcola <i
                     class="bi bi-calculator-fill"></i></button>
+        </div>
+        <div class="alert alert-info mt-3" id="result" role="alert">
         </div>
     </div>
     <script src="main.js"></script>
